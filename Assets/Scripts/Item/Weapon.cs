@@ -63,8 +63,8 @@ public class Weapon : MonoBehaviour
 	{
 		spriteRenderer.sprite = sprites[direction];
 		if (direction == 0) transform.localPosition = new Vector2(0, 1);
-		if (direction == 1) transform.localPosition = new Vector2(1, 0);
+		if (direction == 1) transform.localPosition = new Vector2(0.85f, 0);
 		if (direction == 2) transform.localPosition = new Vector2(0, -1);
-		if (direction == 3) transform.localPosition = new Vector2(-1, 0);
+		if (direction == 3) transform.localPosition = new Vector2(-0.85f, 0);
 	}
 }
