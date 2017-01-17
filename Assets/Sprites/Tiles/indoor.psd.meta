@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a6cee0d68f797440baed376506617d0a
-timeCreated: 1484642595
+timeCreated: 1484696600
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,11 +11,12 @@ TextureImporter:
     21300008: dgrey
     21300010: door-locked
     21300012: hroadline
-    21300014: fence
+    21300014: hfence
     21300016: hvdroadline
     21300018: vroadline
     21300020: bush
     21300022: vfence
+    21300024: rcornerfence
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -236,7 +237,7 @@ TextureImporter:
         - {x: 8, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: fence
+      name: hfence
       rect:
         serializedVersion: 2
         x: 48
@@ -348,6 +349,20 @@ TextureImporter:
         - {x: -4, y: -8}
         - {x: 3, y: -8}
         - {x: 3, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rcornerfence
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline:
     - - {x: -48, y: 32}
