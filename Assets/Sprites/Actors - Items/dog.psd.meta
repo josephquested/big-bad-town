@@ -1,13 +1,21 @@
 fileFormatVersion: 2
 guid: dfea47de96e7e48b98705f87904d1847
-timeCreated: 1484699730
+timeCreated: 1484700908
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: dog-walk-2a
+    21300002: dog-walk-2b
+    21300004: dog-walk-3a
+    21300006: dog-walk-3b
+    21300008: dog-walk-0a
+    21300010: dog-walk-0b
+    21300012: dog-walk-1a
+    21300014: dog-walk-1b
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -27,24 +35,24 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -58,11 +66,215 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
+    sprites:
+    - serializedVersion: 2
+      name: dog-walk-2a
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-2b
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-3a
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-3b
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-0a
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-0b
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-1a
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog-walk-1b
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -46, y: 0}
+      - {x: -46, y: -18}
+      - {x: -36, y: -18}
+      - {x: -34, y: -14}
+      - {x: -34, y: 0}
+    - - {x: -30, y: 0}
+      - {x: -30, y: -17}
+      - {x: -28, y: -18}
+      - {x: -21, y: -18}
+      - {x: -18, y: -17}
+      - {x: -18, y: -2}
+      - {x: -19, y: 0}
+    - - {x: 18, y: 0}
+      - {x: -18, y: 0}
+      - {x: -18, y: -18}
+      - {x: 18, y: -18}
+    - - {x: -46, y: 32}
+      - {x: -46, y: 15}
+      - {x: -45, y: 14}
+      - {x: -40, y: 14}
+      - {x: -34, y: 16}
+      - {x: -34, y: 30}
+      - {x: -35, y: 32}
+    - - {x: -31, y: 32}
+      - {x: -31, y: 23}
+      - {x: -30, y: 17}
+      - {x: -29, y: 15}
+      - {x: -25, y: 14}
+      - {x: -20, y: 14}
+      - {x: -19, y: 15}
+      - {x: -19, y: 32}
+    - - {x: -15, y: 32}
+      - {x: -18, y: 30}
+      - {x: -18, y: 18}
+      - {x: -16, y: 14}
+      - {x: 16, y: 14}
+      - {x: 18, y: 20}
+      - {x: 18, y: 31}
+      - {x: 11, y: 32}
+    physicsShape:
+    - - {x: -46, y: 0}
+      - {x: -46, y: -18}
+      - {x: -36, y: -18}
+      - {x: -34, y: -14}
+      - {x: -34, y: 0}
+    - - {x: -30, y: 0}
+      - {x: -30, y: -17}
+      - {x: -28, y: -18}
+      - {x: -21, y: -18}
+      - {x: -18, y: -17}
+      - {x: -18, y: -2}
+      - {x: -19, y: 0}
+    - - {x: 13, y: 0}
+      - {x: 7, y: 0}
+      - {x: 5, y: -3}
+      - {x: 2, y: 0}
+      - {x: -18, y: 0}
+      - {x: -18, y: -17}
+      - {x: -16, y: -18}
+      - {x: 18, y: -18}
+      - {x: 18, y: -3}
+    - - {x: -46, y: 32}
+      - {x: -46, y: 15}
+      - {x: -45, y: 14}
+      - {x: -40, y: 14}
+      - {x: -34, y: 16}
+      - {x: -34, y: 30}
+      - {x: -35, y: 32}
+    - - {x: -31, y: 32}
+      - {x: -31, y: 23}
+      - {x: -30, y: 17}
+      - {x: -29, y: 15}
+      - {x: -25, y: 14}
+      - {x: -20, y: 14}
+      - {x: -19, y: 15}
+      - {x: -19, y: 32}
+    - - {x: 8, y: 32}
+      - {x: -14, y: 32}
+      - {x: -18, y: 29}
+      - {x: -18, y: 18}
+      - {x: -16, y: 14}
+      - {x: 15, y: 14}
+      - {x: 17, y: 17}
+      - {x: 18, y: 21}
+      - {x: 18, y: 30}
   spritePackingTag: 
   userData: 
   assetBundleName: 
