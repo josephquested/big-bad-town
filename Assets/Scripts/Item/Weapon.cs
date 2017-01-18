@@ -15,8 +15,8 @@ public class Weapon : MonoBehaviour
 
 	void Start ()
 	{
-		attackCollider = this.GetComponent<Collider2D>();
-		spriteRenderer = this.GetComponent<SpriteRenderer>();
+		attackCollider = GetComponent<Collider2D>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
 		parentTransform = transform.parent.transform;
 	}
 
