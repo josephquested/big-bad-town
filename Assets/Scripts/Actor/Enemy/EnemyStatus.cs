@@ -17,7 +17,6 @@ public class EnemyStatus : ActorStatus
 
 	void Reset ()
 	{
-		print("I should reset!");
 		actorMovement.CanMove = false;
 		actorMovement.Direction = spawnDirection;
 		transform.position = spawnLocation;
@@ -52,7 +51,7 @@ public class EnemyStatus : ActorStatus
 
 		for (float i = 0; i < duration; i++)
 		{
-			spriteRenderer.color = Color.red;
+			spriteRenderer.color = Color.white;
 			yield return new WaitForSeconds(0.1f);
 			spriteRenderer.color = Color.black;
 			yield return new WaitForSeconds(0.1f);

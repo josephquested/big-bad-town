@@ -13,17 +13,12 @@ public class ScreenController : MonoBehaviour
 
 	public void SetGameScreenState (GameScreen screen)
 	{
-		print(screen);
-		print(cameraController.Transitioning);
-
 		if (screen == activeGameScreen && !cameraController.Transitioning)
 		{
-			print("should activate game screen");
 			screen.ActivateGameScreen();
 		}
 		else if (screen != activeGameScreen && !cameraController.Transitioning)
 		{
-			print("should reset game screen");
 			screen.ResetGameScreen();
 		}
 	}
