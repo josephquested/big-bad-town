@@ -27,8 +27,10 @@ public class GameScreen : MonoBehaviour
 
 	public void ResetGameScreen ()
 	{
+		print("triggering screen reset");
 		if (!screenActive) return;
 		screenActive = false;
+		print("screen broadcasting reset");
 		BroadcastMessage("Reset", SendMessageOptions.DontRequireReceiver);
 	}
 

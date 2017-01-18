@@ -55,7 +55,6 @@
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyStatus.cs" />
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyTrigger.cs" />
-     <Compile Include="Assets\Scripts\Actor\Enemy\Shrub\ShrubStatus.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerCollider.cs" />
@@ -72,9 +71,6 @@
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
      <Compile Include="Assets\Scripts\Item\Weapon.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -89,9 +85,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

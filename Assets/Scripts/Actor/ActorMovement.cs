@@ -5,8 +5,8 @@ public class ActorMovement : MonoBehaviour
 {
 	protected Rigidbody2D rb;
 	private bool moving;
+	public bool canMove;
 
-	[SerializeField] private bool canMove;
 	[SerializeField] private float speed;
 	[SerializeField] private int direction;
 

@@ -52,7 +52,7 @@ public class ActorStatus : MonoBehaviour
 		for (float i = 0; i < duration; i++)
 		{
 			Invulnerable = true;
-			spriteRenderer.color = Color.red;
+			spriteRenderer.color = Color.black;
 			yield return new WaitForSeconds(0.1f);
 			spriteRenderer.color = Color.white;
 			yield return new WaitForSeconds(0.1f);
