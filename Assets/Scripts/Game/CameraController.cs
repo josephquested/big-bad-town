@@ -39,6 +39,13 @@ public class CameraController : MonoBehaviour
 
 	void Update ()
 	{
+		// debugging only
+		if (Input.GetKeyDown("t")) {
+			print("deleting all saved data");
+			PlayerPrefs.DeleteAll();
+		}
+		//
+
 		if (screen == null) return;
 		Vector3 target = new Vector3(screen.position.x, screen.position.y, -10f);
     float distanceLerped = (Time.time - lerpTime) * speed;
