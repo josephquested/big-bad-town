@@ -6,6 +6,13 @@ public class MeleeAttack : MonoBehaviour {
 
 	public bool attacking;
 	public MeleeWeapon weapon;
+	public Animates animates;
+	public Moves moves;
+
+	void Start () {
+		animates = gameObject.GetComponent<Animates>();
+		moves = gameObject.GetComponent<Moves>();
+	}
 
 	public void ReceiveInput () {
 		ProcessAttack();
@@ -22,6 +29,8 @@ public class MeleeAttack : MonoBehaviour {
 	{
 		float duration = weapon.attackSpeed;
 		attacking = true;
+		animates.Attacking(true);
+		moves.Lumber(weapon.weight);
 
 		while (duration >= 0)
 		{
@@ -30,7 +39,9 @@ public class MeleeAttack : MonoBehaviour {
 			yield return new WaitForSeconds(0.01f);
 		}
 
+		moves.UnLumber();
 		attacking = false;
+		animates.Attacking(false);
 		weapon.Attack(false);
 	}
 }

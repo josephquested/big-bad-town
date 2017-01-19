@@ -12,6 +12,7 @@ public class MeleeWeapon : MonoBehaviour {
 	public int damage;
 	public float attackSpeed;
  	public int knockback;
+	public float weight;
 
 	void Start () {
 		attackCollider = GetComponent<Collider2D>();
@@ -20,7 +21,6 @@ public class MeleeWeapon : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D (Collider2D collider) {
-		print("hit " + collider.name);
 		 if (collider.gameObject.GetComponent<Status>() != null) {
 			Status status = collider.gameObject.GetComponent<Status>();
 			if (!status.invulnerable) {

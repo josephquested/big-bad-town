@@ -10,6 +10,8 @@ public class Moves : MonoBehaviour {
 	public bool canMove;
 	public int direction;
 
+	float actualSpeed;
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		animates = GetComponent<Animates>();
@@ -41,7 +43,7 @@ public class Moves : MonoBehaviour {
 
 	void Move (int direction) {
 		Vector2 movement = GetMovementVector(direction);
-		rb.AddForce(movement * speed);
+		rb.AddForce(movement * actualSpeed);
 	}
 
 	Vector2 GetMovementVector (int newDirection) {
@@ -51,5 +53,13 @@ public class Moves : MonoBehaviour {
 		if (newDirection == 2) movementVector = new Vector2(0, -1);
 		if (newDirection == 3) movementVector = new Vector2(-1, 0);
 		return movementVector;
+	}
+
+	public void Lumber (float weight) {
+		actualSpeed -= weight;
+	}
+
+	public void UnLumber () {
+		actualSpeed = speed;
 	}
 }
