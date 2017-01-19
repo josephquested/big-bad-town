@@ -31,7 +31,7 @@ public class Moves : MonoBehaviour {
 		return -1;
 	}
 
-	void ProcessMovement (int newDirection) {
+	public void ProcessMovement (int newDirection) {
 		if (canMove && newDirection >= 0) {
 			direction = newDirection;
 			animates.Direction(direction);
