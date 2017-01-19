@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-	private Weapon weapon;
 	public int lockpicks;
 
 	public void Pickup (string type, int quantity) {
