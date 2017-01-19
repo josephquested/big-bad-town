@@ -73,6 +73,8 @@
      <Compile Include="Assets\Scripts\Game\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
+     <Compile Include="Assets\Scripts\Item\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Item\Gun.cs" />
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
      <Compile Include="Assets\Scripts\Item\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
