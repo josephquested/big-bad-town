@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour {
+	Animates animates;
+	Moves moves;
 
 	public bool attacking;
 	public MeleeWeapon weapon;
-	public Animates animates;
-	public Moves moves;
 
 	void Start () {
 		animates = gameObject.GetComponent<Animates>();

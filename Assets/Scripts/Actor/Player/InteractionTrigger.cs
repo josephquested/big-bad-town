@@ -1,14 +1,14 @@
-﻿using System.Collections;
+	﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractionTrigger : MonoBehaviour {
 
-	PlayerInventory inventory;
+	Inventory inventory;
 	Moves moves;
 
 	void Start () {
-		inventory = transform.parent.GetComponent<PlayerInventory>();
+		inventory = transform.parent.GetComponent<Inventory>();
 		moves = transform.parent.GetComponent<Moves>();
 	}
 
@@ -34,7 +34,7 @@ public class InteractionTrigger : MonoBehaviour {
 	void OnTriggerStay2D (Collider2D collider) {
 		if (collider.tag == "LockedDoor" && Input.GetButtonDown("Attack")) {
 			if (inventory.lockpicks > 0) {
-				inventory.UseLockpick();
+				inventory.Drop("lockpick", 1);
 				collider.GetComponent<LockedDoor>().Unlock();
 			}
 		}

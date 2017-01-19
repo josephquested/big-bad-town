@@ -15,6 +15,7 @@ public class Moves : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		animates = GetComponent<Animates>();
+		actualSpeed = speed;
 	}
 
 	public void ReceiveInput (float horizontal, float vertical) {

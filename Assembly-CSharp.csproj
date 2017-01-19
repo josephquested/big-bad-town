@@ -57,11 +57,11 @@
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyTrigger.cs" />
      <Compile Include="Assets\Scripts\Actor\Enemy\LockedShooter.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\InteractionTrigger.cs" />
+     <Compile Include="Assets\Scripts\Actor\Player\Inventory.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerCollider.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerInput.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerInventory.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\Animates.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />

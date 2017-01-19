@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Status : MonoBehaviour {
-	SpriteRenderer spriteRenderer;
+	protected SpriteRenderer spriteRenderer;
+	protected Collider2D collider;
 
 	public int baseHealth;
 	public int health;
@@ -11,9 +12,9 @@ public class Status : MonoBehaviour {
 
 	// Sounds sounds;
 
-	void Awake () {
-		DontDestroyOnLoad(transform.gameObject);
+	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
+		collider = GetComponent<Collider2D>();
 		// actorAudio = GetComponent<Sounds>();
 	}
 
@@ -43,6 +44,6 @@ public class Status : MonoBehaviour {
 
 	public virtual void Die () {
 		gameObject.GetComponent<SpriteRenderer>().enabled = false;
-		gameObject.GetComponent<Collider2D>().enabled = false;
+		collider.enabled = false;
 	}
 }

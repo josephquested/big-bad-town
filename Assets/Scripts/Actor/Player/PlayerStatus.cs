@@ -1,20 +1,25 @@
-﻿using System.Collections;
+	﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStatus : ActorStatus
+public class PlayerStatus : Status
 {
+
+	void Awake () {
+		DontDestroyOnLoad(gameObject);
+	}
+
 	public override void Die ()
 	{
 		spriteRenderer.enabled = false;
-		actorCollider.enabled = false;
+		collider.enabled = false;
 		Respawn();
 	}
 
 	void Respawn () {
-		Health = 9;
+		health = baseHealth;
 		spriteRenderer.enabled = true;
-		actorCollider.enabled = true;
+		collider.enabled = true;
 		transform.position = Vector3.zero;
 	}
 }
