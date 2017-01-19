@@ -37,6 +37,7 @@ public class ActorController : MonoBehaviour {
 			yield return new WaitForSeconds(0.01f);
 		}
 
+		moves.ProcessMovement(-1);
 		moving = false;
 	}
 
