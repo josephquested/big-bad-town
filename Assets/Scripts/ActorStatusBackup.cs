@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorStatus : Status {
+public class ActorStatusBackup : Status {
 	Vector2 spawnLocation;
 
 	public Moves moves;
@@ -19,6 +19,10 @@ public class ActorStatus : Status {
 
 	void Reset () {
 		ToggleMoves(false);
+		TogglePassiveAttack(true);
+		ToggleMeleeAttack(true);
+		collider.enabled = true;
+		spriteRenderer.enabled = true;
 		transform.position = spawnLocation;
 		health = baseHealth;
 	}
@@ -28,6 +32,10 @@ public class ActorStatus : Status {
 	}
 
 	IEnumerator DeathCoroutine (float duration) {
+		ToggleMoves(false);
+		TogglePassiveAttack(false);
+		ToggleMeleeAttack(false);
+
 		for (float i = 0; i < duration; i++) {
 			spriteRenderer.color = Color.white;
 			yield return new WaitForSeconds(0.1f);
@@ -36,12 +44,25 @@ public class ActorStatus : Status {
 			spriteRenderer.color = Color.white;
 		}
 
-		gameObject.SetActive(false);
+		collider.enabled = false;
+		spriteRenderer.enabled = false;
 	}
 
 	void ToggleMoves (bool toggle) {
 		if (moves != null) {
 			moves.canMove = toggle;
+		}
+	}
+
+	void TogglePassiveAttack (bool toggle) {
+		if (passiveAttack != null) {
+			passiveAttack.enabled = toggle;
+		}
+	}
+
+	void ToggleMeleeAttack (bool toggle) {
+		if (meleeAttack != null) {
+			meleeAttack.enabled = toggle;
 		}
 	}
 }

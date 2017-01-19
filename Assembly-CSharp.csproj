@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\ActorAudio.cs" />
      <Compile Include="Assets\Scripts\ActorController.cs" />
      <Compile Include="Assets\Scripts\ActorStatus.cs" />
+     <Compile Include="Assets\Scripts\ActorStatusBackup.cs" />
      <Compile Include="Assets\Scripts\Animates.cs" />
      <Compile Include="Assets\Scripts\EnemyTrigger.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
