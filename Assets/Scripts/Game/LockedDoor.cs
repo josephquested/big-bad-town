@@ -10,13 +10,7 @@ public class LockedDoor : MonoBehaviour {
 		}
 	}
 
-	void Update () {
-		if (Input.GetKeyDown("y")) {
-			Unlock();
-		}
-	}
-
-	void Unlock () {
+	public void Unlock () {
 		PlayerPrefs.SetInt(gameObject.name, 1);
 		Destroy(gameObject);
 	}

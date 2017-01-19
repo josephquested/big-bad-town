@@ -8,7 +8,7 @@ public class ActorMovement : MonoBehaviour
 	public bool canMove;
 
 	[SerializeField] private float speed;
-	[SerializeField] private int direction;
+	public int direction;
 
 	void Start ()
 	{
