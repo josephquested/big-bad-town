@@ -5,11 +5,11 @@ using UnityEngine;
 public class InteractionTrigger : MonoBehaviour {
 
 	PlayerInventory inventory;
-	PlayerMovement playerMovement;
+	Moves moves;
 
 	void Start () {
 		inventory = transform.parent.GetComponent<PlayerInventory>();
-		playerMovement = transform.parent.GetComponent<PlayerMovement>();
+		moves = transform.parent.GetComponent<Moves>();
 	}
 
 	void Update () {
@@ -17,16 +17,16 @@ public class InteractionTrigger : MonoBehaviour {
 	}
 
 	void UpdateDirection () {
-		if (playerMovement.direction == 0) {
+		if (moves.direction == 0) {
 			transform.rotation = Quaternion.Euler(0, 0, 180);
 		}
-		if (playerMovement.direction == 1) {
+		if (moves.direction == 1) {
 			transform.rotation = Quaternion.Euler(0, 0, 90);
 		}
-		if (playerMovement.direction == 2) {
+		if (moves.direction == 2) {
 			transform.rotation = Quaternion.Euler(0, 0, 0);
 		}
-		if (playerMovement.direction == 3) {
+		if (moves.direction == 3) {
 			transform.rotation = Quaternion.Euler(0, 0, 270);
 		}
 	}

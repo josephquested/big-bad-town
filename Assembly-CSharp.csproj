@@ -62,8 +62,8 @@
      <Compile Include="Assets\Scripts\Actor\Player\PlayerCollider.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerInventory.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerStatus.cs" />
+     <Compile Include="Assets\Scripts\Animates.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Scripts\Game\Fading.cs" />
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\Item\Gun.cs" />
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
      <Compile Include="Assets\Scripts\Item\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Moves.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

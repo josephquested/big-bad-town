@@ -1,32 +1,27 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerInput : MonoBehaviour
-{
-	private PlayerMovement playerMovement;
-	private PlayerAttack playerAttack;
+public class PlayerInput : MonoBehaviour {
+	PlayerAttack playerAttack;
+	Moves moves;
 
-	void Start ()
-	{
-		playerMovement = this.GetComponent<PlayerMovement>();
-		playerAttack = this.GetComponent<PlayerAttack>();
+	void Start () {
+		moves = GetComponent<Moves>();
+		playerAttack = GetComponent<PlayerAttack>();
 	}
 
-	void FixedUpdate ()
-	{
-		GetMovementInput();
+	void FixedUpdate () {
+		MovementInput();
 		GetAttackInput();
 	}
 
-	void GetMovementInput ()
-	{
+	void MovementInput () {
 		float horizontal = Input.GetAxisRaw("Horizontal");
 		float vertical = Input.GetAxisRaw("Vertical");
-		playerMovement.RecieveMovementInput(horizontal, vertical);
+		moves.ReceiveInput(horizontal, vertical);
 	}
 
-	void GetAttackInput ()
-	{
+	void GetAttackInput () {
 		bool attack = Input.GetButtonDown("Attack");
 		playerAttack.RecieveAttackInput(attack);
 	}
