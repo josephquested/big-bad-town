@@ -22,7 +22,7 @@ public class Weapon : MonoBehaviour
 
 	void OnTriggerStay2D (Collider2D collider)
 	{
-		if (collider.tag == "Enemy" && !canDamageEnemies) return;
+			if (collider.tag == "Enemy" && !canDamageEnemies) return;
 		if (collider.tag == "Enemy" || collider.tag == "Player")
 		{
 			ActorStatus status = collider.gameObject.GetComponent<ActorStatus>();

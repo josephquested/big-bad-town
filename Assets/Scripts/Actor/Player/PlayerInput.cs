@@ -2,17 +2,17 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerInput : MonoBehaviour {
-	PlayerAttack playerAttack;
+	MeleeAttack meleeAttack;
 	Moves moves;
 
 	void Start () {
 		moves = GetComponent<Moves>();
-		playerAttack = GetComponent<PlayerAttack>();
+		meleeAttack = GetComponent<MeleeAttack>();
 	}
 
 	void FixedUpdate () {
 		MovementInput();
-		GetAttackInput();
+		AttackInput();
 	}
 
 	void MovementInput () {
@@ -21,8 +21,9 @@ public class PlayerInput : MonoBehaviour {
 		moves.ReceiveInput(horizontal, vertical);
 	}
 
-	void GetAttackInput () {
-		bool attack = Input.GetButtonDown("Attack");
-		playerAttack.RecieveAttackInput(attack);
+	void AttackInput () {
+		if (Input.GetButtonDown("Attack")) {
+			meleeAttack.ReceiveInput();
+		}
 	}
 }
