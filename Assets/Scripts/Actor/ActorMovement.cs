@@ -6,6 +6,7 @@ public class ActorMovement : MonoBehaviour
 	protected Rigidbody2D rb;
 	private bool moving;
 	public bool canMove;
+	public bool doesMove = true;
 
 	[SerializeField] private float speed;
 	public int direction;
@@ -23,7 +24,7 @@ public class ActorMovement : MonoBehaviour
 
 	public void ProcessMovement (int newDirection)
 	{
-		if (newDirection == 5 || !canMove)
+		if (newDirection == 5 || !canMove || !doesMove)
 		{
 			moving = false;
 		}

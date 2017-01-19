@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyStatus.cs" />
      <Compile Include="Assets\Scripts\Actor\Enemy\EnemyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Actor\Enemy\LockedShooter.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\InteractionTrigger.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Actor\Player\PlayerAttack.cs" />
