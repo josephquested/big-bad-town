@@ -13,7 +13,7 @@ public class AutoFires : MonoBehaviour {
 	}
 
 	void Update () {
-		if (!shooting) {
+		if (!shooting && transform.parent.GetComponent<GameScreen>().screenActive) {
 			StartCoroutine(ShootCoroutine());
 		}
 	}

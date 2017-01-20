@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPoint : MonoBehaviour {
-	public GameObject spawnPrefab;
-	public int direction;
+public class GunnerSpawnPoint : SpawnPoint {
+	public float frequency;
 
-	void Awake () {
-		GetComponent<SpriteRenderer>().enabled = false;
-		Spawn();
-	}
-
-	public virtual void Spawn () {
+	public override void Spawn () {
 		var prefab = Instantiate(spawnPrefab, transform.position, transform.rotation);
 		prefab.GetComponent<Animates>().direction = direction;
+		prefab.GetComponent<AutoFires>().frequency = frequency;
 		prefab.transform.parent = transform.parent;
 	}
 }

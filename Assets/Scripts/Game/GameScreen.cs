@@ -10,7 +10,7 @@ public class GameScreen : MonoBehaviour {
 
 	void Start () {
 		screenController = transform.parent.GetComponent<ScreenController>();
-		foreach (Transform child in transform) if (child.gameObject.GetComponent<SpawnPoint>() != null) {
+		foreach (Transform child in transform) if (child.gameObject.tag == "Spawner") {
 			respawnObjects.Add(child.gameObject);
 		}
 	}
