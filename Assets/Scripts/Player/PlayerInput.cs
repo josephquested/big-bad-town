@@ -3,16 +3,19 @@ using System.Collections;
 
 public class PlayerInput : MonoBehaviour {
 	MeleeAttack meleeAttack;
+	RangedAttack rangedAttack;
 	Moves moves;
 
 	void Start () {
 		moves = GetComponent<Moves>();
 		meleeAttack = GetComponent<MeleeAttack>();
+		rangedAttack = GetComponent<RangedAttack>();
 	}
 
 	void FixedUpdate () {
 		MovementInput();
 		AttackInput();
+		ShootInput();
 	}
 
 	void MovementInput () {
@@ -24,6 +27,13 @@ public class PlayerInput : MonoBehaviour {
 	void AttackInput () {
 		if (Input.GetButtonDown("Attack")) {
 			meleeAttack.ReceiveInput();
+		}
+	}
+
+	void ShootInput () {
+		if (Input.GetButtonDown("Shoot")) {
+			print("shoot input");
+			rangedAttack.ReceiveInput();
 		}
 	}
 }

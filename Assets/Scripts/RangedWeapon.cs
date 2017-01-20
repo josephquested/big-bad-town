@@ -37,6 +37,8 @@ public class RangedWeapon : MonoBehaviour {
 			duration -= 0.1f;
 			yield return new WaitForSeconds(0.01f);
 		}
+
+		spriteRenderer.enabled = false;
 		shooting = false;
 	}
 
