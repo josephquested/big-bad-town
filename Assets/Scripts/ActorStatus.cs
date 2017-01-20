@@ -22,7 +22,6 @@ public class ActorStatus : Status {
 			yield return new WaitForSeconds(0.1f);
 			spriteRenderer.color = Color.white;
 		}
-
 		gameObject.SetActive(false);
 	}
 }

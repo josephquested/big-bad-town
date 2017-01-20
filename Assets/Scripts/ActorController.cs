@@ -17,7 +17,6 @@ public class ActorController : MonoBehaviour {
 
 	void Update () {
 		previousPosition = transform.position;
-
 		if (!isMoving){
 			if (randomMovement) {
 				ProcessRandomMovement();
@@ -37,21 +36,19 @@ public class ActorController : MonoBehaviour {
 		StartCoroutine(MovementCoroutine(direction, duration));
 	}
 
-	public void StopMovement () {
-		moves.ProcessMovement(-1);
-		isMoving = false;
-	}
-
 	IEnumerator MovementCoroutine (int direction, float duration) {
 		isMoving = true;
-
 		while (duration >= 0) {
 			duration -= 0.1f;
 			moves.ProcessMovement(direction);
 			yield return new WaitForSeconds(0.01f);
 		}
-
 		StopMovement();
+	}
+
+	public void StopMovement () {
+		moves.ProcessMovement(-1);
+		isMoving = false;
 	}
 
 	void OnTriggerEnter2D (Collider2D collider) {
