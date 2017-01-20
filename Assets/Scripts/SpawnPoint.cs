@@ -7,6 +7,7 @@ public class SpawnPoint : MonoBehaviour {
 
 	void Awake () {
 		GetComponent<SpriteRenderer>().enabled = false;
+		Spawn();
 	}
 
 	public void Spawn () {
