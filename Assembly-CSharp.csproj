@@ -46,11 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ActorController.cs" />
-     <Compile Include="Assets\Scripts\ActorStatus.cs" />
-     <Compile Include="Assets\Scripts\Animates.cs" />
-     <Compile Include="Assets\Scripts\AutoFires.cs" />
-     <Compile Include="Assets\Scripts\EnemyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Actor\ActorController.cs" />
+     <Compile Include="Assets\Scripts\Actor\ActorStatus.cs" />
+     <Compile Include="Assets\Scripts\Actor\Animates.cs" />
+     <Compile Include="Assets\Scripts\Actor\AutoFires.cs" />
+     <Compile Include="Assets\Scripts\Actor\EnemyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Actor\MeleeAttack.cs" />
+     <Compile Include="Assets\Scripts\Actor\Moves.cs" />
+     <Compile Include="Assets\Scripts\Actor\PassiveAttack.cs" />
+     <Compile Include="Assets\Scripts\Actor\RangedAttack.cs" />
+     <Compile Include="Assets\Scripts\Actor\Sounds.cs" />
+     <Compile Include="Assets\Scripts\Actor\Status.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Scripts\Game\Fading.cs" />
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
@@ -60,23 +66,15 @@
      <Compile Include="Assets\Scripts\Game\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
+     <Compile Include="Assets\Scripts\Game\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Item\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Item\Gun.cs" />
+     <Compile Include="Assets\Scripts\Item\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
-     <Compile Include="Assets\Scripts\LockedShooter.cs" />
-     <Compile Include="Assets\Scripts\MeleeAttack.cs" />
-     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
-     <Compile Include="Assets\Scripts\Moves.cs" />
-     <Compile Include="Assets\Scripts\PassiveAttack.cs" />
+     <Compile Include="Assets\Scripts\Item\RangedWeapon.cs" />
      <Compile Include="Assets\Scripts\Player\InteractionTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
-     <Compile Include="Assets\Scripts\RangedAttack.cs" />
-     <Compile Include="Assets\Scripts\RangedWeapon.cs" />
-     <Compile Include="Assets\Scripts\Sounds.cs" />
-     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
-     <Compile Include="Assets\Scripts\Status.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
