@@ -59,6 +59,9 @@ public class Moves : MonoBehaviour {
 	public void Lumber (bool shouldLumber, float weight) {
 		if (shouldLumber) {
 			actualSpeed -= weight;
+			if (actualSpeed < 0) {
+				actualSpeed = 0;
+			}
 		} else {
 			actualSpeed = speed;
 		}
