@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorAudio : MonoBehaviour
-{
+public class Sounds : MonoBehaviour {
 	private AudioSource audioSource;
 
-	[SerializeField] private AudioClip hurt;
+ 	public AudioClip damaged;
 
-	void Start ()
-	{
+	void Start () {
 		audioSource = this.GetComponent<AudioSource>();
 	}
 
-	public void Hurt ()
-	{
-		audioSource.clip = hurt;
+	public void Damaged () {
+		audioSource.clip = damaged;
 		audioSource.Play();
 	}
 }

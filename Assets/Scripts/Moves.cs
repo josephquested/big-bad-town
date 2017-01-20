@@ -56,11 +56,11 @@ public class Moves : MonoBehaviour {
 		return movementVector;
 	}
 
-	public void Lumber (float weight) {
-		actualSpeed -= weight;
-	}
-
-	public void UnLumber () {
-		actualSpeed = speed;
+	public void Lumber (bool shouldLumber, float weight) {
+		if (shouldLumber) {
+			actualSpeed -= weight;
+		} else {
+			actualSpeed = speed;
+		}
 	}
 }

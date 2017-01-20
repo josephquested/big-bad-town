@@ -38,7 +38,7 @@ public class MeleeWeapon : MonoBehaviour {
 
 	public void Attack (bool shouldAttack) {
 		if (shouldAttack) {
-			SetDirection(parentTransform.gameObject.GetComponent<Moves>().direction);
+			SetDirection(parentTransform.gameObject.GetComponent<Animates>().direction);
 			attackCollider.enabled = true;
 			spriteRenderer.enabled = true;
 		} else {

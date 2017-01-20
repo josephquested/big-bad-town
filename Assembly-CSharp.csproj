@@ -46,10 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ActorAudio.cs" />
      <Compile Include="Assets\Scripts\ActorController.cs" />
      <Compile Include="Assets\Scripts\ActorStatus.cs" />
-     <Compile Include="Assets\Scripts\ActorStatusBackup.cs" />
      <Compile Include="Assets\Scripts\Animates.cs" />
      <Compile Include="Assets\Scripts\EnemyTrigger.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
@@ -73,6 +71,9 @@
      <Compile Include="Assets\Scripts\Player\Inventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
+     <Compile Include="Assets\Scripts\RangedAttack.cs" />
+     <Compile Include="Assets\Scripts\RangedWeapon.cs" />
+     <Compile Include="Assets\Scripts\Sounds.cs" />
      <Compile Include="Assets\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Status.cs" />
  <Reference Include="UnityEngine.UI">
