@@ -17,19 +17,16 @@ public class EnemyTrigger : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D collider) {
 		if (collider.tag == "Player") {
-			print("player in trigger!");
 			StartCoroutine(TriggerCoroutine());
 		}
 	}
 
 	IEnumerator TriggerCoroutine () {
-		print("starting trigger coroutine!");
 		yield return new WaitForSeconds(triggerDelay);
 		FireTrigger();
 	}
 
 	void FireTrigger () {
-		print("firing!");
 		if (meleeAttack != null) {
 			meleeAttack.ReceiveInput();
 		}

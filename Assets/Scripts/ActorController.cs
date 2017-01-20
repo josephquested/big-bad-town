@@ -4,32 +4,46 @@ using UnityEngine;
 
 public class ActorController : MonoBehaviour {
 	Vector2 previousPosition;
-	Moves moves;
 
-	public bool moving;
+	public Moves moves;
+	public bool isMoving;
 	public bool randomMovement;
  	public float minMovement;
  	public float maxMovement;
 
-	void Start () {
-		moves = GetComponent<Moves>();
+	void Awake () {
+		previousPosition = transform.position;
 	}
 
 	void Update () {
 		previousPosition = transform.position;
 
-		if (!moving){
+		if (!isMoving){
 			if (randomMovement) {
-				StartCoroutine(MoveAtRandom());
+				ProcessRandomMovement();
 			}
 		}
 	}
 
-	IEnumerator MoveAtRandom ()
-	{
+	public void Activate () {
+		if (moves != null) {
+			moves.canMove = true;
+		}
+	}
+
+	void ProcessRandomMovement () {
 		int direction = Random.Range(0, 4);
 		float duration = Random.Range(minMovement, maxMovement);
-		moving = true;
+		StartCoroutine(MovementCoroutine(direction, duration));
+	}
+
+	public void StopMovement () {
+		moves.ProcessMovement(-1);
+		isMoving = false;
+	}
+
+	IEnumerator MovementCoroutine (int direction, float duration) {
+		isMoving = true;
 
 		while (duration >= 0) {
 			duration -= 0.1f;
@@ -37,8 +51,7 @@ public class ActorController : MonoBehaviour {
 			yield return new WaitForSeconds(0.01f);
 		}
 
-		moves.ProcessMovement(-1);
-		moving = false;
+		StopMovement();
 	}
 
 	void OnTriggerEnter2D (Collider2D collider) {

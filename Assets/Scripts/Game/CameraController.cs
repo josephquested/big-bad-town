@@ -4,9 +4,9 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
 	public Transform screen;
-	private bool transitioning;
   private float lerpTime;
 
+	public bool transitioning;
 	public float speed = 1.0F;
 
 	void Awake ()
@@ -54,8 +54,4 @@ public class CameraController : MonoBehaviour
 		if (float.IsNaN(fracJourney)) return;
     transform.position = Vector3.Lerp(transform.position, target, fracJourney);
   }
-
-	public bool Transitioning {
-		get { return transitioning; }
-	}
 }
