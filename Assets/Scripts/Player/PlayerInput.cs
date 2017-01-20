@@ -6,6 +6,10 @@ public class PlayerInput : MonoBehaviour {
 	RangedAttack rangedAttack;
 	Moves moves;
 
+	void Awake () {
+		DontDestroyOnLoad(gameObject);
+	}
+
 	void Start () {
 		moves = GetComponent<Moves>();
 		meleeAttack = GetComponent<MeleeAttack>();
