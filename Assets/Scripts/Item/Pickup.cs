@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour {
 
 	public string type;
 	public bool respawns = true;
+	public int quantity;
 
 	void Awake () {
 		if (!respawns && PlayerPrefs.GetInt(gameObject.name) == 1) {
@@ -16,7 +17,7 @@ public class Pickup : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D collider) {
 		if (collider.tag == "Player") {
 			if (type == "lockpick") {
-				collider.GetComponent<PlayerInventory>().PickupLockpick();
+				collider.GetComponent<Inventory>().Pickup(type, quantity);
 			}
 			GetPickup();
 		}

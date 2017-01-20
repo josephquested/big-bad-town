@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameScreen : MonoBehaviour
-{
-	private ScreenController screenController;
+public class GameScreen : MonoBehaviour {
+	ScreenController screenController;
+
+	public List<GameObject> respawnObjects;
 	public bool screenActive = false;
 
-	void Start ()
-	{
+	void Start () {
 		screenController = transform.parent.GetComponent<ScreenController>();
+		foreach (Transform child in transform) if (child.gameObject.GetComponent<SpawnPoint>() != null) {
+			respawnObjects.Add(child.gameObject);
+		}
 	}
 
-	void Update ()
-	{
+	void Update () {
 		screenController.SetGameScreenState(this);
 	}
 
-	void OnTriggerStay2D (Collider2D collider)
-	{
-		if (collider.tag == "Player")
-		{
-			screenController.ActiveGameScreen = this;
+	void OnTriggerStay2D (Collider2D collider) {
+		if (collider.tag == "Player") {
+			screenController.SetGameScreen(this);
 		}
 	}
 
@@ -29,13 +29,25 @@ public class GameScreen : MonoBehaviour
 	{
 		if (!screenActive) return;
 		screenActive = false;
-		BroadcastMessage("Reset", SendMessageOptions.DontRequireReceiver);
-	}
 
-	public void ActivateGameScreen ()
-	{
+		// clears all alive enemies from the screen
+		foreach (Transform child in transform) if (child.gameObject.tag == "Enemy") {
+			Destroy(child.gameObject);
+		}
+
+		// respawns objects in screen
+		foreach (GameObject obj in respawnObjects) {
+			obj.GetComponent<SpawnPoint>().Spawn();
+		}
+  }
+
+	public void ActivateGameScreen () {
 		if (screenActive) return;
 		screenActive = true;
-		BroadcastMessage("Activate", SendMessageOptions.DontRequireReceiver);
+
+		// activates all actors in the screen
+		foreach (Transform child in transform) if (child.gameObject.GetComponent<ActorController>() != null) {
+			child.gameObject.GetComponent<ActorController>().Activate();
+		}
 	}
 }

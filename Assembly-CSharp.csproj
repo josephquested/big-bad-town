@@ -46,24 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Actor\ActorAnimator.cs" />
-     <Compile Include="Assets\Scripts\Actor\ActorAttack.cs" />
-     <Compile Include="Assets\Scripts\Actor\ActorAudio.cs" />
-     <Compile Include="Assets\Scripts\Actor\ActorMovement.cs" />
+     <Compile Include="Assets\Scripts\Actor\ActorController.cs" />
      <Compile Include="Assets\Scripts\Actor\ActorStatus.cs" />
-     <Compile Include="Assets\Scripts\Actor\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Actor\Enemy\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\Actor\Enemy\EnemyStatus.cs" />
-     <Compile Include="Assets\Scripts\Actor\Enemy\EnemyTrigger.cs" />
-     <Compile Include="Assets\Scripts\Actor\Enemy\LockedShooter.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\InteractionTrigger.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerAnimator.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerAttack.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerCollider.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerInput.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerInventory.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Actor\Player\PlayerStatus.cs" />
+     <Compile Include="Assets\Scripts\Actor\Animates.cs" />
+     <Compile Include="Assets\Scripts\Actor\AutoFires.cs" />
+     <Compile Include="Assets\Scripts\Actor\EnemyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Actor\MeleeAttack.cs" />
+     <Compile Include="Assets\Scripts\Actor\Moves.cs" />
+     <Compile Include="Assets\Scripts\Actor\PassiveAttack.cs" />
+     <Compile Include="Assets\Scripts\Actor\RangedAttack.cs" />
+     <Compile Include="Assets\Scripts\Actor\Sounds.cs" />
+     <Compile Include="Assets\Scripts\Actor\Status.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Scripts\Game\Fading.cs" />
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
@@ -73,10 +66,18 @@
      <Compile Include="Assets\Scripts\Game\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
+     <Compile Include="Assets\Scripts\Game\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Item\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Item\Gun.cs" />
+     <Compile Include="Assets\Scripts\Item\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
-     <Compile Include="Assets\Scripts\Item\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Item\RangedWeapon.cs" />
+     <Compile Include="Assets\Scripts\Player\InteractionTrigger.cs" />
+     <Compile Include="Assets\Scripts\Player\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -91,6 +92,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

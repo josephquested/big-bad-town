@@ -1,35 +1,25 @@
 using UnityEngine;
 ﻿using System.Collections;
 
-public class ScreenController : MonoBehaviour
-{
-	public CameraController cameraController;
-	private GameScreen activeGameScreen;
+public class ScreenController : MonoBehaviour {
+	CameraController cameraController;
 
-	void Start ()
-	{
+	public GameScreen activeGameScreen;
+
+	void Start () {
 		cameraController = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
 	}
 
-	public void SetGameScreenState (GameScreen screen)
-	{
-		if (screen == activeGameScreen && !cameraController.Transitioning)
-		{
+	public void SetGameScreenState (GameScreen screen) {
+		if (screen == activeGameScreen && !cameraController.transitioning) {
 			screen.ActivateGameScreen();
-		}
-		else if (screen != activeGameScreen && !cameraController.Transitioning)
-		{
+		} else if (screen != activeGameScreen && !cameraController.transitioning) {
 			screen.ResetGameScreen();
 		}
 	}
 
-	public GameScreen ActiveGameScreen
-	{
-		get { return activeGameScreen; }
-		set
-		{
-			activeGameScreen = value;
-			cameraController.SetGameScreen(activeGameScreen.gameObject.transform);
-		}
+	public void SetGameScreen (GameScreen newScreen) {
+		activeGameScreen = newScreen;
+		cameraController.SetGameScreen(activeGameScreen.gameObject.transform);
 	}
 }
