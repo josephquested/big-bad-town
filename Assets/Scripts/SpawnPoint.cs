@@ -10,7 +10,7 @@ public class SpawnPoint : MonoBehaviour {
 	}
 
 	public void Spawn () {
-		var prefab = Instantiate(spawnPrefab, transform.localPosition, transform.rotation);
+		var prefab = Instantiate(spawnPrefab, transform.position, transform.rotation);
 		prefab.transform.parent = transform.parent;
 	}
 }
