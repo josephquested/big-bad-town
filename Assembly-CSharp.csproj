@@ -69,6 +69,8 @@
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
      <Compile Include="Assets\Scripts\Game\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Item\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Item\Explodes.cs" />
+     <Compile Include="Assets\Scripts\Item\ExplosionCollider.cs" />
      <Compile Include="Assets\Scripts\Item\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
      <Compile Include="Assets\Scripts\Item\RangedWeapon.cs" />

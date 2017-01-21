@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Status : MonoBehaviour {
 	protected SpriteRenderer spriteRenderer;
-	protected Collider2D collider;
+	protected Collider2D actorCollider;
 	Sounds sounds;
 
 	public int baseHealth;
@@ -14,7 +14,7 @@ public class Status : MonoBehaviour {
 
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		collider = GetComponent<Collider2D>();
+		actorCollider = GetComponent<Collider2D>();
 		sounds = GetComponent<Sounds>();
 	}
 
@@ -44,6 +44,6 @@ public class Status : MonoBehaviour {
 
 	public virtual void Die () {
 		gameObject.GetComponent<SpriteRenderer>().enabled = false;
-		collider.enabled = false;
+		actorCollider.enabled = false;
 	}
 }

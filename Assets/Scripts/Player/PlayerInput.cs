@@ -36,7 +36,6 @@ public class PlayerInput : MonoBehaviour {
 
 	void ShootInput () {
 		if (Input.GetButtonDown("Shoot")) {
-			print("shoot input");
 			rangedAttack.ReceiveInput();
 		}
 	}

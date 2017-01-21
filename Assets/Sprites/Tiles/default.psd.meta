@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a6cee0d68f797440baed376506617d0a
-timeCreated: 1484779762
+timeCreated: 1484972136
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,6 +21,7 @@ TextureImporter:
     21300028: counter
     21300030: shelftop
     21300032: cashregister
+    21300034: bangbarrel
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -465,6 +466,20 @@ TextureImporter:
         - {x: -8, y: -8}
         - {x: 8, y: -8}
         - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bangbarrel
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline:
     - - {x: -48, y: 32}

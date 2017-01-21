@@ -1,27 +1,13 @@
 fileFormatVersion: 2
-guid: b839835dc0f644869b00a7461c8679cd
-timeCreated: 1484793334
+guid: 02891382361b04734880a7887f8bebe3
+timeCreated: 1484903215
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: white
-    21300002: lgrey
-    21300004: brick
-    21300006: black
-    21300008: dgrey
-    21300010: door-locked
-    21300012: hroadline
-    21300014: hfence
-    21300016: hvdroadline
-    21300018: vroadline
-    21300020: bush
-    21300022: vfence
-    21300024: rcornerfence
-    21300026: supershelf
-    21300028: counter
-    21300030: shelftop
-    21300032: cashregister
-    21300034: lockpick
+    21300000: lockpick
+    21300002: coin
+    21300004: coins
+    21300006: coinbag
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -101,18 +87,50 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
-    outline:
-    - - {x: -48, y: 32}
-      - {x: -48, y: -2}
-      - {x: -3, y: -2}
-      - {x: 2, y: 16}
-      - {x: 2, y: 32}
-    physicsShape:
-    - - {x: -48, y: 32}
-      - {x: -48, y: -2}
-      - {x: -3, y: -2}
-      - {x: 2, y: 16}
-      - {x: 2, y: 32}
+    - serializedVersion: 2
+      name: coin
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: coins
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: coinbag
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
