@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ActorStatus : Status {
 	public PassiveAttack passiveAttack;
-	public MeleeAttack meleeAttack;
 
 	void Reset () {
 		health = baseHealth;
