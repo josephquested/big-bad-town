@@ -16,6 +16,9 @@ public class Moves : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		animates = GetComponent<Animates>();
 		actualSpeed = speed;
+
+		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+		rb.interpolation = RigidbodyInterpolation2D.Extrapolate;
 	}
 
 	public void ReceiveInput (float horizontal, float vertical) {

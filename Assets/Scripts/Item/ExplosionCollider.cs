@@ -13,7 +13,6 @@ public class ExplosionCollider : MonoBehaviour {
 		}
 
 		if (collider.gameObject.GetComponent<Explodes>() != null) {
-			print("found another barrel!");
 			collider.gameObject.GetComponent<Explodes>().Explode();
 		}
 	}
