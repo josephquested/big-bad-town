@@ -14,9 +14,6 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D collider) {
-
-		print("hit collider " + collider.name);
-
 		if (collider.tag == "Player" || collider.tag == "Enemy") {
 			collider.gameObject.GetComponent<Status>().Damage(damage);
 			Knockback(collider);

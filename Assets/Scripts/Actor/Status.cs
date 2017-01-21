@@ -5,23 +5,25 @@ using UnityEngine;
 public class Status : MonoBehaviour {
 	protected SpriteRenderer spriteRenderer;
 	protected Collider2D actorCollider;
-	Sounds sounds;
+	protected AudioSource audioSource;
 
 	public int baseHealth;
 	public int health;
 	public bool invulnerable;
-
+	public AudioClip dieSound;
+	public AudioClip damagedSound;
 
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		actorCollider = GetComponent<Collider2D>();
-		sounds = GetComponent<Sounds>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	public void Damage (int damage) {
 		if (invulnerable) return;
 		health -= damage;
-		sounds.Damaged();
+		audioSource.clip = damagedSound;
+		audioSource.Play();
 		StartCoroutine(InvulnerableCoroutine());
 
 		if (health <= 0)

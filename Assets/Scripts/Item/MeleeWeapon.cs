@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour {
-
 	Collider2D attackCollider;
 	SpriteRenderer spriteRenderer;
 	Transform parentTransform;
@@ -41,6 +40,7 @@ public class MeleeWeapon : MonoBehaviour {
 			SetDirection(parentTransform.gameObject.GetComponent<Animates>().direction);
 			attackCollider.enabled = true;
 			spriteRenderer.enabled = true;
+
 		} else {
 			attackCollider.enabled = false;
 			spriteRenderer.enabled = false;

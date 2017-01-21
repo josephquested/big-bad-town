@@ -11,6 +11,8 @@ public class ActorStatus : Status {
 	}
 
 	public override void Die () {
+		audioSource.clip = dieSound;
+		audioSource.Play();
 		StartCoroutine(DeathCoroutine(1.5f));
 	}
 

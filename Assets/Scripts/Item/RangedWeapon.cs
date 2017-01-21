@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RangedWeapon : MonoBehaviour {
 	SpriteRenderer spriteRenderer;
+	AudioSource audioSource;
 	int direction;
 
 	public GameObject bulletPrefab;
@@ -14,9 +15,11 @@ public class RangedWeapon : MonoBehaviour {
 	public float attackSpeed;
 	public float bulletSpeed;
 	public int weight;
+	public AudioClip attackSound;
 
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -54,6 +57,9 @@ public class RangedWeapon : MonoBehaviour {
 		Vector2 vector = GetVector(transform.parent.gameObject.GetComponent<Animates>().direction);
 		bullet.GetComponent<Bullet>().ReceiveData(damage, transform, knockback);
 		bullet.GetComponent<Rigidbody2D>().AddForce(vector * bulletSpeed);
+
+		audioSource.clip = attackSound;
+		audioSource.Play();
 	}
 
 	void UpdateSprite () {
