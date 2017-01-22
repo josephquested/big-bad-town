@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 	public int damage;
-	public Transform parentTransform;
+	public Vector3 originPosition;
 	public int knockback;
 
-	public void ReceiveData (int setDamage, Transform setParent, int setKnockback) {
+	public void ReceiveData (int setDamage, Transform parentTransform, int setKnockback) {
 		damage = setDamage;
-		parentTransform = setParent;
+		originPosition = parentTransform.position;
 		knockback = setKnockback;
 	}
 
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void Knockback (Collider2D collider) {
-		Vector2 diff = (collider.transform.position - parentTransform.position).normalized;
+		Vector2 diff = (collider.transform.position - originPosition).normalized;
 		Vector2 direction = new Vector2(Mathf.Round(diff.x), Mathf.Round(diff.y));
 		collider.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * knockback);
 	}
