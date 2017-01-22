@@ -7,6 +7,7 @@ public class Explodes : MonoBehaviour {
 
 	public Collider2D explosionCollider;
 	public AudioClip explodeSound;
+	public bool explosionOnly;
 
 	void Start () {
 		audioSource = GetComponent<AudioSource>();

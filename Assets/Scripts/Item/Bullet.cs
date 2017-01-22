@@ -21,7 +21,10 @@ public class Bullet : MonoBehaviour {
 		}
 
 		if (collider.gameObject.GetComponent<Explodes>() != null) {
-			collider.gameObject.GetComponent<Explodes>().Explode();
+			Explodes explodes = collider.gameObject.GetComponent<Explodes>();
+			if (!explodes.explosionOnly) {
+				explodes.Explode();
+			}
 			Destroy(gameObject);
 		}
 
