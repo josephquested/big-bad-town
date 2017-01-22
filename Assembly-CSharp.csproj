@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Actor\ActorStatus.cs" />
      <Compile Include="Assets\Scripts\Actor\Animates.cs" />
      <Compile Include="Assets\Scripts\Actor\AutoFires.cs" />
+     <Compile Include="Assets\Scripts\Actor\Drops.cs" />
      <Compile Include="Assets\Scripts\Actor\EnemyTrigger.cs" />
      <Compile Include="Assets\Scripts\Actor\MeleeAttack.cs" />
      <Compile Include="Assets\Scripts\Actor\Moves.cs" />

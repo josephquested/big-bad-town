@@ -23,6 +23,15 @@ public class ActorStatus : Status {
 			yield return new WaitForSeconds(0.1f);
 			spriteRenderer.color = Color.white;
 		}
+
+		if (GetComponent<Drops>() != null) {
+			GetComponent<Drops>().AttemptDrop();
+		}
+
+		if (singleSpawn) {
+			PlayerPrefs.SetInt(spawner.name, 1);
+		}
+
 		gameObject.SetActive(false);
 	}
 }

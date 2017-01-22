@@ -52,7 +52,7 @@ public class ActorController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D collider) {
-		if (collider.tag == "GameScreen" && collider.gameObject != transform.parent) {
+		if (collider.tag == "GameScreen" && collider.gameObject != transform.parent.gameObject) {
 			transform.position = previousPosition;
 		}
 	}

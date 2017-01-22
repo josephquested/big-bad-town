@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Status : MonoBehaviour {
+	[HideInInspector] public GameObject spawner;
+	[HideInInspector] public bool singleSpawn;
+
 	protected SpriteRenderer spriteRenderer;
 	protected Collider2D actorCollider;
 	protected AudioSource audioSource;
