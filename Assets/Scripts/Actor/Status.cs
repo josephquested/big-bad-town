@@ -36,7 +36,7 @@ public class Status : MonoBehaviour {
 	}
 
 	IEnumerator InvulnerableCoroutine () {
-		float duration = 1;
+		float duration = 1.5;
 		for (float i = 0; i < duration; i++) {
 			invulnerable = true;
 			spriteRenderer.color = Color.black;
