@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1e90b523d46a44116b33afb206d6d089
-timeCreated: 1485146586
+timeCreated: 1485210284
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,9 @@ TextureImporter:
     21300024: manager-walk-0
     21300026: manager-walk-1
     21300028: manager-attack
+    21300030: manager-die-0
+    21300032: manager-die-1
+    21300034: manager-die-2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -93,10 +96,22 @@ TextureImporter:
         width: 27
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -7.5, y: 15.5}
+        - {x: -13.5, y: 8.5}
+        - {x: -13.5, y: -15.5}
+        - {x: 13.5, y: -15.5}
+        - {x: 13.5, y: 10.5}
+        - {x: 7.5, y: 15.5}
+      physicsShape:
+      - - {x: -7.5, y: 15.5}
+        - {x: -13.5, y: 8.5}
+        - {x: -13.5, y: -15.5}
+        - {x: 13.5, y: -15.5}
+        - {x: 13.5, y: 10.5}
+        - {x: 7.5, y: 15.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: manager-walk-1
@@ -107,10 +122,22 @@ TextureImporter:
         width: 27
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -7.5, y: 15.5}
+        - {x: -13.5, y: 7.5}
+        - {x: -13.5, y: -15.5}
+        - {x: 13.5, y: -15.5}
+        - {x: 13.5, y: 8.5}
+        - {x: 7.5, y: 15.5}
+      physicsShape:
+      - - {x: -7.5, y: 15.5}
+        - {x: -13.5, y: 7.5}
+        - {x: -13.5, y: -15.5}
+        - {x: 13.5, y: -15.5}
+        - {x: 13.5, y: 8.5}
+        - {x: 7.5, y: 15.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: manager-attack
@@ -119,6 +146,62 @@ TextureImporter:
         x: 68
         y: 32
         width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -11, y: 13}
+        - {x: -13, y: -1}
+        - {x: -13, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 9}
+        - {x: 7, y: 16}
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -11, y: 13}
+        - {x: -13, y: -1}
+        - {x: -13, y: -16}
+        - {x: 13, y: -16}
+        - {x: 13, y: 9}
+        - {x: 7, y: 16}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manager-die-0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manager-die-1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: manager-die-2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 33
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}

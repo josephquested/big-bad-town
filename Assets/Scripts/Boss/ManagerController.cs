@@ -22,6 +22,8 @@ public class ManagerController : MonoBehaviour {
 	void Awake () {
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
+		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+		rb.interpolation = RigidbodyInterpolation2D.Extrapolate;
 	}
 
 	void Update () {

@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorStatus : Status {
-	public PassiveAttack passiveAttack;
-
-	void Reset () {
-		health = baseHealth;
-	}
+public class ManagerStatus : Status {
+	public BangBarrelBox[] bangBarrelBoxes;
 
 	public override void Die () {
+		foreach (BangBarrelBox box in bangBarrelBoxes) {
+			box.enabled = false;
+		}
+
 		audioSource.clip = dieSound;
 		audioSource.Play();
-		StartCoroutine(DeathCoroutine(1.5f));
+		StartCoroutine(DeathCoroutine(15f));
 	}
 
 	IEnumerator DeathCoroutine (float duration) {
+		GetComponent<Animator>().SetBool("moving", false);
+		GetComponent<Animator>().SetBool("attack", false);
+		GetComponent<Animator>().SetTrigger("die");
+
+		GetComponent<ManagerController>().canMove = false;
+
 		for (float i = 0; i < duration; i++) {
 			spriteRenderer.color = Color.white;
 			yield return new WaitForSeconds(0.1f);
@@ -23,7 +29,6 @@ public class ActorStatus : Status {
 			yield return new WaitForSeconds(0.1f);
 			spriteRenderer.color = Color.white;
 		}
-
 
 		if (GetComponent<Drops>() != null) {
 			GetComponent<Drops>().AttemptDrop();
