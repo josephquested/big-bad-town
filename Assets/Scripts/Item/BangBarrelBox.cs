@@ -26,7 +26,7 @@ public class BangBarrelBox : MonoBehaviour {
 	void Spawn () {
 		var prefab = Instantiate(barrelPrefab, transform.position, transform.rotation);
 		prefab.GetComponent<Rigidbody2D>().AddForce(GetVector(direction) * velocity);
-		print(prefab);
+		SetBarrelRotation(prefab);
 		StartCoroutine(CooldownCoroutine());
 	}
 
@@ -34,6 +34,12 @@ public class BangBarrelBox : MonoBehaviour {
 		cooledDown = false;
 		yield return new WaitForSeconds(frequency);
 		cooledDown = true;
+	}
+
+	void SetBarrelRotation (GameObject barrel) {
+		if (direction == 3) {
+			barrel.transform.localEulerAngles = new Vector3(0, 180, 0);
+		}
 	}
 
 	Vector2 GetVector (int direction) {
