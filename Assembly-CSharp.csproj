@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Actor\PassiveAttack.cs" />
      <Compile Include="Assets\Scripts\Actor\RangedAttack.cs" />
      <Compile Include="Assets\Scripts\Actor\Status.cs" />
+     <Compile Include="Assets\Scripts\Boss\ManagerController.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Scripts\Game\Fading.cs" />
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
