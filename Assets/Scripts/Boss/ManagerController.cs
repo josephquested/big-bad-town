@@ -6,12 +6,18 @@ public class ManagerController : MonoBehaviour {
 	Rigidbody2D rb;
 	Animator animator;
 
-	public bool canMove;
 	public int health;
 	public float speed;
-	public bool isMoving;
+
 	public float minMovement;
 	public float maxMovement;
+	public bool canMove;
+	public bool isMoving;
+
+	public GameObject barrelPrefab;
+	public bool attacking;
+	public float attackCooldown;
+	public float barrelSpeed;
 
 	void Awake () {
 		rb = GetComponent<Rigidbody2D>();
@@ -22,11 +28,17 @@ public class ManagerController : MonoBehaviour {
 		if (!isMoving && canMove){
 			ProcessMovement();
 		}
+
+		if (!attacking) {
+			StartCoroutine(AttackCoroutine());
+		}
 	}
 
 	public void Activate () {
 		canMove = true;
 	}
+
+	// movement
 
 	void ProcessMovement () {
 		int direction = 1;
@@ -53,6 +65,26 @@ public class ManagerController : MonoBehaviour {
 		if (direction == 3) return new Vector2(-1, 0);
 		return new Vector2(0, 0);
 	}
+
+	// attack
+
+	IEnumerator AttackCoroutine () {
+		animator.SetTrigger("attack");
+		attacking = true;
+
+		Attack();
+
+		yield return new WaitForSeconds(attackCooldown);
+		attacking = false;
+	}
+
+	void Attack () {
+		Vector2 spawnPostion = new Vector2(transform.position.x, transform.position.y -3);
+		var prefab = Instantiate(barrelPrefab, spawnPostion, transform.rotation);
+		prefab.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -1) * barrelSpeed);
+		prefab.transform.localEulerAngles = new Vector3(0, 180, 0);
+	}
+
 
 	void OnTriggerEnter2D (Collider2D collider) {
 		if (collider.GetComponent<ExplosionCollider>() != null) {
