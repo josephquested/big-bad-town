@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
      <Compile Include="Assets\Scripts\Game\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Item\BangBarrelBox.cs" />
      <Compile Include="Assets\Scripts\Item\Bullet.cs" />
      <Compile Include="Assets\Scripts\Item\Explodes.cs" />
      <Compile Include="Assets\Scripts\Item\ExplosionCollider.cs" />
