@@ -7,7 +7,7 @@ public class ExplosionCollider : MonoBehaviour {
 	public int knockback;
 
 	void OnTriggerEnter2D (Collider2D collider) {
-		if (collider.tag == "Player" || collider.tag == "Enemy") {
+		if (collider.gameObject.GetComponent<Status>()) {
 			collider.gameObject.GetComponent<Status>().Damage(damage);
 			Knockback(collider);
 		}

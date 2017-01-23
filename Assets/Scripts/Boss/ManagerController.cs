@@ -6,7 +6,6 @@ public class ManagerController : MonoBehaviour {
 	Rigidbody2D rb;
 	Animator animator;
 
-	public int health;
 	public float speed;
 
 	public float minMovement;
@@ -17,6 +16,7 @@ public class ManagerController : MonoBehaviour {
 	public GameObject barrelPrefab;
 	public bool attacking;
 	public float attackCooldown;
+	public float attackAnimation;
 	public float barrelSpeed;
 
 	void Awake () {
@@ -69,27 +69,24 @@ public class ManagerController : MonoBehaviour {
 	// attack
 
 	IEnumerator AttackCoroutine () {
-		animator.SetTrigger("attack");
+		animator.SetBool("moving", false);
+		animator.SetBool("attack", true);
 		attacking = true;
 
 		Attack();
+
+		yield return new WaitForSeconds(attackAnimation);
+		animator.SetBool("moving", true);
+		animator.SetBool("attack", false);
 
 		yield return new WaitForSeconds(attackCooldown);
 		attacking = false;
 	}
 
 	void Attack () {
-		Vector2 spawnPostion = new Vector2(transform.position.x, transform.position.y -3);
+		Vector2 spawnPostion = new Vector2(transform.position.x, transform.position.y - 1.5f);
 		var prefab = Instantiate(barrelPrefab, spawnPostion, transform.rotation);
 		prefab.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -1) * barrelSpeed);
-		prefab.transform.localEulerAngles = new Vector3(0, 180, 0);
-	}
-
-
-	void OnTriggerEnter2D (Collider2D collider) {
-		if (collider.GetComponent<ExplosionCollider>() != null) {
-			health -= 1;
-			print("got hit!");
-		}
+		prefab.transform.localEulerAngles = new Vector3(0, 0, -90);
 	}
 }
