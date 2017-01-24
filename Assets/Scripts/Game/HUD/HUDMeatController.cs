@@ -5,7 +5,8 @@ using UnityEngine;
 public class HUDMeatController : MonoBehaviour {
 	private Status status;
 
-	[SerializeField] private HUDMeat[] hudMeat;
+	public GameObject hudMeatPrefab;
+	public List<HUDMeat> hudMeat;
 
 	void Start () {
 		status = GameObject.FindGameObjectWithTag("Player").GetComponent<Status>();
@@ -16,16 +17,23 @@ public class HUDMeatController : MonoBehaviour {
 		UpdateMeat();
 	}
 
+	public void AddMeat () {
+		var newMeat = Instantiate(hudMeatPrefab, transform.position, transform.rotation);
+		hudMeat.Add(newMeat.GetComponent<HUDMeat>());
+		newMeat.transform.parent = transform;
+		newMeat.transform.position = new Vector2(transform.position.x + (0.5f * hudMeat.Count + 0.5f), transform.position.y);
+	}
+
 	void UpdateBones () {
-		for (int i = 1; i < hudMeat.Length; i++) {
-			hudMeat[i].transform.localPosition = new Vector2(hudMeat[i - 1].transform.localPosition.x + 1, 0);
+		for (int i = 1; i < hudMeat.Count; i++) {
+			hudMeat[i].transform.localPosition = new Vector2(hudMeat[i - 1].transform.localPosition.x + 0.5f, 0);
 		}
 	}
 
 	void UpdateMeat () {
 		int health = status.health;
 
-		for (int i = 0; i < hudMeat.Length; i++)
+		for (int i = 0; i < hudMeat.Count; i++)
 		{
 			hudMeat[i].plump = 0;
 

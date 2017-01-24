@@ -14,8 +14,19 @@ public class PlayerStatus : Status {
 		Respawn();
 	}
 
-	void Respawn () {
+	public void IncreaseMaxHealth () {
+		var meatController = GameObject.FindWithTag("MeatController").GetComponent<HUDMeatController>();
+		meatController.AddMeat();
+		baseHealth += 3;
+		FillHealth();
+	}
+
+	public void FillHealth () {
 		health = baseHealth;
+	}
+
+	void Respawn () {
+		FillHealth();
 		spriteRenderer.enabled = true;
 		actorCollider.enabled = true;
 		transform.position = Vector3.zero;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ManagerStatus : Status {
 	public BangBarrelBox[] bangBarrelBoxes;
+	public GameObject fakeWall;
 
 	public override void Die () {
 		foreach (BangBarrelBox box in bangBarrelBoxes) {
@@ -12,7 +13,7 @@ public class ManagerStatus : Status {
 
 		audioSource.clip = dieSound;
 		audioSource.Play();
-		StartCoroutine(DeathCoroutine(15f));
+		StartCoroutine(DeathCoroutine(12f));
 	}
 
 	IEnumerator DeathCoroutine (float duration) {
@@ -38,6 +39,7 @@ public class ManagerStatus : Status {
 			PlayerPrefs.SetInt(spawner.name, 1);
 		}
 
+		Destroy(fakeWall);
 		gameObject.SetActive(false);
 	}
 }

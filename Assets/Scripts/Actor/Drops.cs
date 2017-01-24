@@ -8,7 +8,7 @@ public class Drops : MonoBehaviour {
 
 	public void AttemptDrop() {
 		int num = Random.Range(0, 10);
-		if (num >= probability) {
+		if (num <= probability) {
 			int dropIndex = Random.Range(0, drops.Length);
 			Drop(drops[dropIndex]);
 		}

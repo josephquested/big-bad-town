@@ -13,6 +13,10 @@ public class Inventory : MonoBehaviour {
 		if (type == "cash") {
 			cash += quantity;
 		}
+		if (type == "meat") {
+			PlayerStatus status = GetComponent<PlayerStatus>();
+			status.IncreaseMaxHealth();
+		}
 	}
 
 	public void Drop (string type, int quantity) {
