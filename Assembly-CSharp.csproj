@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
      <Compile Include="Assets\Scripts\Game\GunnerSpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Game\HUD\HUDBulletController.cs" />
+     <Compile Include="Assets\Scripts\Game\HUD\HUDCashController.cs" />
      <Compile Include="Assets\Scripts\Game\HUD\HUDLockpickController.cs" />
      <Compile Include="Assets\Scripts\Game\HUD\HUDMeat.cs" />
      <Compile Include="Assets\Scripts\Game\HUD\HUDMeatController.cs" />
