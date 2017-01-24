@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManagerController : MonoBehaviour {
 	Rigidbody2D rb;
 	Animator animator;
+	GameScreen parentScreen;
 
 	public float speed;
 
@@ -24,20 +25,33 @@ public class ManagerController : MonoBehaviour {
 		animator = GetComponent<Animator>();
 		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 		rb.interpolation = RigidbodyInterpolation2D.Extrapolate;
+		parentScreen = transform.parent.GetComponent<GameScreen>();
 	}
 
 	void Update () {
+		if (!parentScreen.screenActive) {
+			Reset();
+		} else {
+			Active();
+		}
+
 		if (!isMoving && canMove){
 			ProcessMovement();
 		}
 
-		if (!attacking) {
+		if (!attacking && canMove) {
 			StartCoroutine(AttackCoroutine());
 		}
 	}
 
-	public void Activate () {
+	public void Active () {
 		canMove = true;
+	}
+
+	void Reset () {
+		canMove = false;
+		ManagerStatus status = GetComponent<ManagerStatus>();
+		status.health = status.baseHealth;
 	}
 
 	// movement

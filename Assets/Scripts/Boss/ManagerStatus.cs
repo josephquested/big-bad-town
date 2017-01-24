@@ -6,6 +6,12 @@ public class ManagerStatus : Status {
 	public BangBarrelBox[] bangBarrelBoxes;
 	public GameObject fakeWall;
 
+	void Awake () {
+		if (PlayerPrefs.GetInt(gameObject.name) == 1) {
+			Destroy(gameObject);
+		}
+	}
+
 	public override void Die () {
 		foreach (BangBarrelBox box in bangBarrelBoxes) {
 			box.enabled = false;
@@ -40,6 +46,8 @@ public class ManagerStatus : Status {
 		}
 
 		Destroy(fakeWall);
-		gameObject.SetActive(false);
+
+		PlayerPrefs.SetInt(gameObject.name, 1);
+		Destroy(gameObject);
 	}
 }

@@ -18,7 +18,9 @@ public class SpawnPoint : MonoBehaviour {
 		}
 
 		var prefab = Instantiate(spawnPrefab, transform.position, transform.rotation);
-		prefab.GetComponent<Animates>().direction = direction;
+		if (prefab.GetComponent<Animates>() != null) {
+			prefab.GetComponent<Animates>().direction = direction;
+		}
 		prefab.GetComponent<Status>().spawner = gameObject;
 		prefab.transform.parent = transform.parent;
 
