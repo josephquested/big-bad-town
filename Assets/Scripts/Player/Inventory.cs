@@ -6,6 +6,13 @@ public class Inventory : MonoBehaviour {
 	public int lockpicks;
 	public int cash;
 	public int bullets;
+	public int maxBullets;
+
+	void Update () {
+		if (bullets > maxBullets) {
+			bullets = maxBullets;
+		}
+	}
 
 	public void Pickup (string type, int quantity) {
 		if (type == "lockpick") {
