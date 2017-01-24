@@ -29,6 +29,19 @@ public class HUDCashController : MonoBehaviour {
 		}
 
 		int[] cashArr = IntToIntArray(inventory.cash);
+		System.Array.Reverse(cashArr);
+
+		if (cashArr.Length >= 1) {
+			onesSprite.sprite = numberSprites[cashArr[0]];
+		}
+
+		if (cashArr.Length >= 2) {
+			tensSprite.sprite = numberSprites[cashArr[1]];
+		}
+
+		if (cashArr.Length == 3) {
+			hundredsSprite.sprite = numberSprites[cashArr[2]];
+		}
 	}
 
 	int[] IntToIntArray (int num) {
