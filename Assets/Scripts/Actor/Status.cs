@@ -10,7 +10,7 @@ public class Status : MonoBehaviour {
 	protected Collider2D actorCollider;
 	protected AudioSource audioSource;
 
-	public int baseHealth;
+	public int maxHealth;
 	public int health;
 	public bool invulnerable;
 	public AudioClip dieSound;

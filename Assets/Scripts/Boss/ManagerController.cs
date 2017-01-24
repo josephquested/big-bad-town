@@ -51,7 +51,7 @@ public class ManagerController : MonoBehaviour {
 	void Reset () {
 		canMove = false;
 		ManagerStatus status = GetComponent<ManagerStatus>();
-		status.health = status.baseHealth;
+		status.health = status.maxHealth;
 	}
 
 	// movement

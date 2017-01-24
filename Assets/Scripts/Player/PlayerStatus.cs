@@ -17,12 +17,19 @@ public class PlayerStatus : Status {
 	public void IncreaseMaxHealth () {
 		var meatController = GameObject.FindWithTag("MeatController").GetComponent<HUDMeatController>();
 		meatController.AddMeat();
-		baseHealth += 3;
+		maxHealth += 3;
 		FillHealth();
 	}
 
 	public void FillHealth () {
-		health = baseHealth;
+		health = maxHealth;
+	}
+
+	public void Heal (int amount) {
+		health += amount;
+		if (health > maxHealth) {
+			health = maxHealth;
+		}
 	}
 
 	void Respawn () {

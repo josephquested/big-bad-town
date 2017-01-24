@@ -6,7 +6,7 @@ public class ActorStatus : Status {
 	public PassiveAttack passiveAttack;
 
 	void Reset () {
-		health = baseHealth;
+		health = maxHealth;
 	}
 
 	public override void Die () {

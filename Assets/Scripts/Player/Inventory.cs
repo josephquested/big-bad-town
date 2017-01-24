@@ -11,13 +11,20 @@ public class Inventory : MonoBehaviour {
 		if (type == "lockpick") {
 			lockpicks += quantity;
 		}
+
 		if (type == "cash") {
 			cash += quantity;
 		}
+
 		if (type == "meat") {
 			PlayerStatus status = GetComponent<PlayerStatus>();
 			status.IncreaseMaxHealth();
 		}
+
+		if (type == "syringe") {
+			GetComponent<PlayerStatus>().Heal(3);
+		}
+
 		if (type == "pistol") {
 			RangedAttack rangedAttack = GetComponent<RangedAttack>();
 			if (rangedAttack.weapon == null) {
