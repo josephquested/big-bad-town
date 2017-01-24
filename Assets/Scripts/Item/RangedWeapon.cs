@@ -11,6 +11,7 @@ public class RangedWeapon : MonoBehaviour {
 	public bool shooting;
 	public Sprite[] sprites;
 	public int damage;
+	public int bulletsPerShot;
 	public int knockback;
 	public float attackSpeed;
 	public float bulletSpeed;
@@ -27,6 +28,15 @@ public class RangedWeapon : MonoBehaviour {
 	}
 
 	public void Attack () {
+		if (transform.parent.GetComponent<Inventory>() != null) {
+			Inventory inventory = transform.parent.GetComponent<Inventory>();
+			if (inventory.bullets >= bulletsPerShot) {
+				inventory.bullets -= bulletsPerShot;
+			} else {
+				return;
+			}
+		}
+
 		spriteRenderer.enabled = true;
 		StartCoroutine(ShootCoroutine());
 	}
