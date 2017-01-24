@@ -12,6 +12,9 @@ public class Inventory : MonoBehaviour {
 		if (bullets > maxBullets) {
 			bullets = maxBullets;
 		}
+		if (lockpicks > 9) {
+			lockpicks = 9;
+		}
 	}
 
 	public void Pickup (string type, int quantity) {

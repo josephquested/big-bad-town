@@ -32,8 +32,16 @@ public class PlayerStatus : Status {
 		}
 	}
 
+	void RespawnBullets () {
+		Inventory inventory = GetComponent<Inventory>();
+		if (inventory.bullets < 5 && GetComponent<RangedAttack>().weapon != null) {
+			inventory.bullets = 5;
+		}
+	}
+
 	void Respawn () {
 		FillHealth();
+		RespawnBullets();
 		spriteRenderer.enabled = true;
 		actorCollider.enabled = true;
 		transform.position = Vector3.zero;
