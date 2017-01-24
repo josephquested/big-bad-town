@@ -27,6 +27,11 @@ public class Explodes : MonoBehaviour {
 		audioSource.Play();
 		explosionCollider.enabled = true;
 		yield return new WaitForSeconds(0.25f);
+
+		if (GetComponent<Drops>() != null) {
+			GetComponent<Drops>().AttemptDrop();
+		}
+
 		Destroy(gameObject);
 	}
 

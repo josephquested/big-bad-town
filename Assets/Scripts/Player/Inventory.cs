@@ -35,15 +35,15 @@ public class Inventory : MonoBehaviour {
 			GetComponent<PlayerStatus>().Heal(3);
 		}
 
+		if (type == "ammo") {
+			bullets += quantity;
+		}
+
 		if (type == "pistol") {
 			RangedAttack rangedAttack = GetComponent<RangedAttack>();
-			if (rangedAttack.weapon == null) {
-				RangedWeapon pistol = transform.Find("Pistol").gameObject.GetComponent<RangedWeapon>();
-				rangedAttack.weapon = pistol;
-				bullets += 10;
-			} else {
-				bullets += 2;
-			}
+			RangedWeapon pistol = transform.Find("Pistol").gameObject.GetComponent<RangedWeapon>();
+			rangedAttack.weapon = pistol;
+			bullets += 10;
 		}
 	}
 
