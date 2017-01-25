@@ -41,8 +41,10 @@ public class Inventory : MonoBehaviour {
 
 		if (type == "pistol") {
 			RangedAttack rangedAttack = GetComponent<RangedAttack>();
-			RangedWeapon pistol = transform.Find("Pistol").gameObject.GetComponent<RangedWeapon>();
-			rangedAttack.weapon = pistol;
+			if (rangedAttack.weapon == null) {
+				RangedWeapon pistol = transform.Find("Pistol").gameObject.GetComponent<RangedWeapon>();
+				rangedAttack.weapon = pistol;
+			}
 			bullets += 10;
 		}
 	}
