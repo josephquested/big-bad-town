@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManagerStatus : Status {
 	public BangBarrelBox[] bangBarrelBoxes;
 	public GameObject fakeWall;
+	public GameObject barrier;
 
 	void Awake () {
 		if (PlayerPrefs.GetInt(gameObject.name) == 1) {
@@ -28,6 +29,7 @@ public class ManagerStatus : Status {
 		GetComponent<Animator>().SetTrigger("die");
 
 		GetComponent<ManagerController>().canMove = false;
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
 		for (float i = 0; i < duration; i++) {
 			spriteRenderer.color = Color.white;
@@ -46,6 +48,7 @@ public class ManagerStatus : Status {
 		}
 
 		Destroy(fakeWall);
+		Destroy(barrier);
 
 		PlayerPrefs.SetInt(gameObject.name, 1);
 		Destroy(gameObject);
