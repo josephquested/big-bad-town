@@ -37,7 +37,8 @@ public class GameScreen : MonoBehaviour {
 
 		// respawns objects in screen
 		foreach (GameObject obj in respawnObjects) {
-			obj.GetComponent<SpawnPoint>().Spawn();
+			obj.GetComponent<Spawner>().Spawn();
+			// obj.GetComponent<SpawnPoint>().Spawn();
 		}
   }
 
