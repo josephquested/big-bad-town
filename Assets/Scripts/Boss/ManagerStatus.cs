@@ -9,6 +9,11 @@ public class ManagerStatus : Status {
 
 	void Awake () {
 		if (PlayerPrefs.GetInt(gameObject.name) == 1) {
+			foreach (BangBarrelBox box in bangBarrelBoxes) {
+				box.enabled = false;
+			}
+			Destroy(fakeWall);
+			Destroy(barrier);
 			Destroy(gameObject);
 		}
 	}
