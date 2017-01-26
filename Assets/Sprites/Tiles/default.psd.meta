@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a6cee0d68f797440baed376506617d0a
-timeCreated: 1485402391
+timeCreated: 1485416784
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -29,6 +29,13 @@ TextureImporter:
     21300044: trunk-left
     21300046: trunk-right
     21300048: door
+    21300050: climbing-trunk-base
+    21300052: foliage-entrance
+    21300054: climbing-trunk-mid
+    21300056: climbing-tree-mid
+    21300058: foliage-entrance-top
+    21300060: foliage-entrance-bottom
+    21300062: foliage-top
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -605,7 +612,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 15
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -657,6 +664,96 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: climbing-tree-mid
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foliage-entrance-top
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foliage-entrance-bottom
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -4}
+        - {x: 7, y: -4}
+        - {x: 8, y: -3}
+        - {x: 8, y: 8}
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -4}
+        - {x: 7, y: -4}
+        - {x: 8, y: -3}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foliage-top
+      rect:
+        serializedVersion: 2
+        x: 64
         y: 0
         width: 16
         height: 16
