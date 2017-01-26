@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a6cee0d68f797440baed376506617d0a
-timeCreated: 1485399842
+timeCreated: 1485402391
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -28,6 +28,7 @@ TextureImporter:
     21300042: foliage-right
     21300044: trunk-left
     21300046: trunk-right
+    21300048: door
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -608,10 +609,24 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: 4}
+        - {x: -2, y: -2}
+        - {x: -2, y: -7}
+        - {x: 0, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 7}
+        - {x: 4, y: 7}
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -2, y: -4}
+        - {x: -2, y: -7}
+        - {x: 0, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 7}
+        - {x: 4, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: trunk-right
@@ -621,6 +636,30 @@ TextureImporter:
         y: 16
         width: 16
         height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: -3.5}
+        - {x: -3, y: 6.5}
+        - {x: -8, y: 6.5}
+        - {x: -8, y: -7.5}
+        - {x: 2, y: -7.5}
+      physicsShape:
+      - - {x: 2, y: -3.5}
+        - {x: -3, y: 6.5}
+        - {x: -8, y: 6.5}
+        - {x: -8, y: -7.5}
+        - {x: 2, y: -7.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: door
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
