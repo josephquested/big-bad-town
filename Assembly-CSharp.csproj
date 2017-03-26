@@ -59,7 +59,9 @@
      <Compile Include="Assets\Scripts\Actor\Status.cs" />
      <Compile Include="Assets\Scripts\Boss\ManagerController.cs" />
      <Compile Include="Assets\Scripts\Boss\ManagerStatus.cs" />
+     <Compile Include="Assets\Scripts\Game\BGMActivator.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Game\EndFlash.cs" />
      <Compile Include="Assets\Scripts\Game\Fading.cs" />
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
      <Compile Include="Assets\Scripts\Game\HUD\HUDBulletController.cs" />
@@ -73,11 +75,13 @@
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
      <Compile Include="Assets\Scripts\Game\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Game\Timer.cs" />
      <Compile Include="Assets\Scripts\Item\BangBarrelBox.cs" />
      <Compile Include="Assets\Scripts\Item\Bullet.cs" />
      <Compile Include="Assets\Scripts\Item\Explodes.cs" />
      <Compile Include="Assets\Scripts\Item\ExplosionCollider.cs" />
      <Compile Include="Assets\Scripts\Item\MeleeWeapon.cs" />
+     <Compile Include="Assets\Scripts\Item\Milk.cs" />
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
      <Compile Include="Assets\Scripts\Item\RangedWeapon.cs" />
      <Compile Include="Assets\Scripts\Item\RollingBangBarrel.cs" />

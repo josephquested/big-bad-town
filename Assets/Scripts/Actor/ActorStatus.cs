@@ -24,7 +24,6 @@ public class ActorStatus : Status {
 			spriteRenderer.color = Color.white;
 		}
 
-
 		if (GetComponent<Drops>() != null) {
 			GetComponent<Drops>().AttemptDrop();
 		}
