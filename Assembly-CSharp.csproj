@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Boss\ManagerController.cs" />
      <Compile Include="Assets\Scripts\Boss\ManagerStatus.cs" />
      <Compile Include="Assets\Scripts\Game\BGMActivator.cs" />
+     <Compile Include="Assets\Scripts\Game\BestTimeText.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Scripts\Game\Credits.cs" />
      <Compile Include="Assets\Scripts\Game\EndFlash.cs" />

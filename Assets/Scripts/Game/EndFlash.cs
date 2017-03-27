@@ -47,11 +47,33 @@ using UnityEngine;
        player.transform.position = Vector3.zero;
        GameObject.FindWithTag("MainCamera").transform.position = new Vector3(0, 0, -10);
        GameObject.FindWithTag("HUD").SetActive(false);
-       PlayerPrefs.DeleteAll();
-       PlayerPrefs.SetInt("gameTime", player.GetComponent<GameTimer>().gameTime);
-       print("completed in...");
-       print(PlayerPrefs.GetInt("gameTime"));
+       SetWinTime();
        SceneManager.LoadScene("credits");
+     }
+
+     void SetWinTime ()
+     {
+       GameObject player = GameObject.FindWithTag("Player");
+
+       if (PlayerPrefs.GetInt("winTime") == 0)
+       {
+         PlayerPrefs.DeleteAll();
+         PlayerPrefs.SetInt("winTime", player.GetComponent<GameTimer>().gameTime);
+       }
+       else
+       {
+         if (PlayerPrefs.GetInt("winTime") > player.GetComponent<GameTimer>().gameTime)
+         {
+           PlayerPrefs.DeleteAll();
+           PlayerPrefs.SetInt("winTime", player.GetComponent<GameTimer>().gameTime);
+         }
+         else
+         {
+           int oldTime = PlayerPrefs.GetInt("winTime");
+           PlayerPrefs.DeleteAll();
+           PlayerPrefs.SetInt("winTime", oldTime);
+         }
+       }
      }
 
      public void Update() {
