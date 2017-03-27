@@ -5,6 +5,6 @@ using UnityEngine;
 public class BGMActivator : MonoBehaviour {
 
 	void Start () {
-		GameObject.FindWithTag("BGM").GetComponent<AudioSource>().Play();
+		GameObject.FindWithTag("BGM").GetComponent<BGMController>().Activate();
 	}
 }

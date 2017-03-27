@@ -10,7 +10,6 @@ public class BestTimeText : MonoBehaviour {
 	{
 		if (PlayerPrefs.GetInt("winTime") == 0)
 		{
-			print("no win time");
 			timeText.text = "NULL";
 		}
 		else

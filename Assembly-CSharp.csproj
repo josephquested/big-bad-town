@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Boss\ManagerController.cs" />
      <Compile Include="Assets\Scripts\Boss\ManagerStatus.cs" />
      <Compile Include="Assets\Scripts\Game\BGMActivator.cs" />
+     <Compile Include="Assets\Scripts\Game\BGMController.cs" />
      <Compile Include="Assets\Scripts\Game\BestTimeText.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Scripts\Game\Credits.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\Scripts\Game\HUD\HUDMeatController.cs" />
      <Compile Include="Assets\Scripts\Game\KeepAlive.cs" />
      <Compile Include="Assets\Scripts\Game\LockedDoor.cs" />
+     <Compile Include="Assets\Scripts\Game\Menu.cs" />
      <Compile Include="Assets\Scripts\Game\SceneChange.cs" />
      <Compile Include="Assets\Scripts\Game\ScreenController.cs" />
      <Compile Include="Assets\Scripts\Game\Seed.cs" />
