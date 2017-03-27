@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BGMController : MonoBehaviour {
 	AudioSource bgmAudio;
+	public AudioClip[] clips;
 
 	void Start ()
 	{
@@ -12,10 +13,17 @@ public class BGMController : MonoBehaviour {
 
 	public void Activate ()
 	{
+		StartCoroutine(BGMRoutine());
+	}
+
+	IEnumerator BGMRoutine ()
+	{
 		bgmAudio.Play();
-		if (bgmAudio.isPlaying)
+		while (bgmAudio.isPlaying)
 		{
-			print("i am playing");
+			yield return null;
 		}
+		bgmAudio.clip = clips[Random.Range(0, clips.Length)];
+		StartCoroutine(BGMRoutine());
 	}
 }
