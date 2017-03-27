@@ -11,11 +11,11 @@
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>unity.Joseph Quested.BIG BAD TOWN</string>
+	<string>unity.Joseph Quested.BUYING MILK</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>BIG BAD TOWN</string>
+	<string>BUYING MILK</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

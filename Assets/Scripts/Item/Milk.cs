@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Milk : MonoBehaviour {
 	public AudioClip winBGM;
+	bool triggered = false;
 
 	void OnTriggerEnter2D (Collider2D collider)
 	{
-		if (collider.tag == "Player")
+		if (!triggered)
 		{
-			AudioSource BGM = GameObject.FindWithTag("BGM").GetComponent<AudioSource>();
-			BGM.clip = winBGM;
-			BGM.Play();
-			print("win!");
+			if (collider.tag == "Player")
+			{
+				GetComponent<SpriteRenderer>().enabled = false; 
+				triggered = true;
+				collider.gameObject.GetComponent<GameTimer>().StopTimer();
+				AudioSource BGM = GameObject.FindWithTag("BGM").GetComponent<AudioSource>();
+				BGM.clip = winBGM;
+				BGM.Play();
+				GetComponent<EndFlash>().enabled = true;
+			}
 		}
 	}
 }

@@ -36,8 +36,23 @@ using UnityEngine;
 			 holdTime = 10000f;
 			 TookDamage();
 			 yield return new WaitForSeconds(1f);
-			 SceneManager.LoadScene("credits");
+       EndItAll();
 		 }
+
+     public void EndItAll ()
+     {
+       GameObject player = GameObject.FindWithTag("Player");
+       player.GetComponent<SpriteRenderer>().enabled = false;
+       player.GetComponent<PlayerInput>().enabled = false;
+       player.transform.position = Vector3.zero;
+       GameObject.FindWithTag("MainCamera").transform.position = new Vector3(0, 0, -10);
+       GameObject.FindWithTag("HUD").SetActive(false);
+       PlayerPrefs.DeleteAll();
+       PlayerPrefs.SetInt("gameTime", player.GetComponent<GameTimer>().gameTime);
+       print("completed in...");
+       print(PlayerPrefs.GetInt("gameTime"));
+       SceneManager.LoadScene("credits");
+     }
 
      public void Update() {
          switch(state){

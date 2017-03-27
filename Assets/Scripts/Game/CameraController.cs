@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
 	void Awake ()
 	{
 		DontDestroyOnLoad(gameObject);
-		Screen.SetResolution(800, 600, false);
+		Screen.SetResolution(500, 400, false);
 	}
 
 	public void Start ()

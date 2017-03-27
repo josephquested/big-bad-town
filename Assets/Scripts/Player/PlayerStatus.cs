@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStatus : Status {
-
 	void Awake () {
 		DontDestroyOnLoad(gameObject);
 	}

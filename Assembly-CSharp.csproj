@@ -61,7 +61,9 @@
      <Compile Include="Assets\Scripts\Boss\ManagerStatus.cs" />
      <Compile Include="Assets\Scripts\Game\BGMActivator.cs" />
      <Compile Include="Assets\Scripts\Game\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Game\Credits.cs" />
      <Compile Include="Assets\Scripts\Game\EndFlash.cs" />
+     <Compile Include="Assets\Scripts\Game\FadeText.cs" />
      <Compile Include="Assets\Scripts\Game\Fading.cs" />
      <Compile Include="Assets\Scripts\Game\GameScreen.cs" />
      <Compile Include="Assets\Scripts\Game\HUD\HUDBulletController.cs" />
@@ -85,6 +87,7 @@
      <Compile Include="Assets\Scripts\Item\Pickup.cs" />
      <Compile Include="Assets\Scripts\Item\RangedWeapon.cs" />
      <Compile Include="Assets\Scripts\Item\RollingBangBarrel.cs" />
+     <Compile Include="Assets\Scripts\Player\GameTimer.cs" />
      <Compile Include="Assets\Scripts\Player\InteractionTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\Inventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
