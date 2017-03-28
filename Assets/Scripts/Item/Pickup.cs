@@ -17,14 +17,28 @@ public class Pickup : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D collider) {
 		if (collider.tag == "Player") {
 			collider.GetComponent<Inventory>().Pickup(type, quantity);
-			GetPickup();
+			StartCoroutine(GetPickup());
 		}
 	}
 
-	void GetPickup () {
-		if (!respawns) {
+	IEnumerator GetPickup ()
+	{
+		if (GetComponent<AudioSource>() != null)
+		{
+			GetComponent<AudioSource>().Play();
+			GetComponent<Collider2D>().enabled = false;
+			GetComponent<SpriteRenderer>().enabled = false;
+			while (GetComponent<AudioSource>().isPlaying)
+			{
+				yield return null;
+			}
+		}
+
+		if (!respawns)
+		{
 			PlayerPrefs.SetInt(gameObject.name, 1);
 		}
+
 		Destroy(gameObject);
 	}
 }

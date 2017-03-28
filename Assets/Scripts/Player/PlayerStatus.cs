@@ -1,13 +1,16 @@
-	﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStatus : Status {
+
 	void Awake () {
 		DontDestroyOnLoad(gameObject);
 	}
 
 	public override void Die () {
+		GetComponent<AudioSource>().clip = dieSound;
+		GetComponent<AudioSource>().Play();
 		spriteRenderer.enabled = false;
 		actorCollider.enabled = false;
 		Respawn();

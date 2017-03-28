@@ -7,6 +7,13 @@ public class Menu : MonoBehaviour {
 
 	void Update ()
 	{
+		if (Input.GetKeyDown("t"))
+		{
+			print("deleted");
+			PlayerPrefs.DeleteAll();
+		}
+
+
 		if (Input.GetButtonDown("Start") || Input.GetButtonDown("Attack") || Input.GetButtonDown("Shoot"))
 		{
 			StartCoroutine(StartRoutine());
